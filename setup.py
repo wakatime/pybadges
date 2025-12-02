@@ -13,7 +13,6 @@
 # limitations under the License.
 """A setup module for pybadges."""
 
-import base64
 import re
 
 from setuptools import setup
@@ -57,8 +56,7 @@ setup(
         'Programming Language :: Python :: 3.12',
         'Operating System :: OS Independent',
     ],
-    description='A library and command-line tool for generating Github-style ' +
-    'badges',
+    description='A library and command-line tool for generating Github-style badges',
     keywords="github gh-badges badge shield status",
     package_data={
         'pybadges': [
@@ -68,11 +66,10 @@ setup(
     long_description=get_long_description(),
     long_description_content_type='text/markdown',
     python_requires='>=3.4',
-    install_requires=['Jinja2>=3,<4', 'requests>=2.22.0,<3'],
+    install_requires=['Jinja2', 'requests', 'pillow', 'setuptools==80.9.0'],
     extras_require={
-        'pil-measurement': ['Pillow>=6,<10'],
         'dev': [
-            'Flask>=2.0',  # For server tests. 
+            'Flask>=2.0',  # For server tests.
             'fonttools>=3.26',
             'nox',
             'Pillow>=5',
